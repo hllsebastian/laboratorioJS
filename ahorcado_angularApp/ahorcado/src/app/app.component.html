@@ -12,7 +12,7 @@
 <div class="row">  <!--el row es propio del bootstrap  y define que es una linea-->
 
   <div class="col text-center">
-    <h1>_ _ _ _ _ _ _ _</h1>
+    <h1>{{palabraOculta}}</h1>
   </div>
 
 </div>
@@ -23,7 +23,7 @@
   
   <div class="col text-center">
 
-    <button *ngFor= "let letra of letras" class="btn btn-primary">
+    <button (click)= "comprobar(letra)" *ngFor= "let letra of letras" class="btn btn-primary">
       {{ letra }}   
     </button>
     
