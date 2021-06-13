@@ -2,24 +2,43 @@
 <div class="row">  <!--el row es propio del bootstrap  y define que es una linea-->
   <div class="col text-center"> <!--col text center: centra todo el texto contenido en el div-->
 
-    <img src="assets/img/9.png" class="ahorcado-img">
+    <img src="assets/img/{{intentos}}.png" class="ahorcado-img">
 
-    <h3>Intentos<small>3/9</small></h3>
+    <h3> Intentos <small> {{intentos}}/9 </small></h3>
 
   </div>
 </div>
 
 <div class="row">  <!--el row es propio del bootstrap  y define que es una linea-->
-
   <div class="col text-center">
-    <h1>{{palabraOculta}}</h1>
-  </div>
 
+    <h1>{{palabraOculta}}</h1>
+
+  </div>
 </div>
 
 
+<div class="row" *ngIf="gano">  <!--el row es propio del bootstrap  y define que es una linea-->
+  <div class="col text-center">
 
-<div class="row">  <!--el row es propio del bootstrap  y define que es una linea-->
+    <h1>Felicidades has ganado</h1>
+    <h4> :D </h4>
+
+  </div>
+</div>
+
+
+<div class="row"*ngIf="perdio">  <!--el row es propio del bootstrap  y define que es una linea-->
+  <div class="col text-center">
+
+    <h1>Que pena, has perdido :( </h1>
+    <h4>la palabra era: {{palabra}} </h4>
+
+  </div>
+</div>
+
+
+<div class="row" *ngIf="!gano && !perdio">  <!--el row es propio del bootstrap  y define que es una linea-->
   
   <div class="col text-center">
 
